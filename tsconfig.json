@@ -1,21 +1,15 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "module": "ESNext",
-    "target": "ES6",
-    "lib": ["ESNext"],
-    "baseUrl": "./"
+      "allowJs": true,
+      "target": "es6",
+      "lib": ["es6", "es2017", "dom"],
+      "types": ["node", "cypress", "@types/testing-library__cypress", "cypress-wait-until"],
+      "allowSyntheticDefaultImports": true,
+      "baseUrl": "/",
+      "moduleResolution": "node",
+      "strict": true,
+      "esModuleInterop": true
   },
-  "include": [
-    "cypress/**/*.ts",
-    "cypress/**/*.tsx",
-    "cypress/support/**/*.d.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
 }

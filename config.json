@@ -1,0 +1,18 @@
+{
+    "reporterEnabled": "mocha-junit-reporter, mochawesome",
+    "mochaJunitReporterReporterOptions": {
+        "mochaFile": "junit_report/junit-test_results[hash].xml",
+        "testsuitesTitle": true,
+        "suiteTitleSeparatedBy": ".",
+        "toConsole": false,
+        "testCaseSwitchClassnameAndName": true
+    },
+    "mochawesomeReporterOptions": {
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+    }
+}
