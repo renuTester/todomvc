@@ -10,7 +10,7 @@
     "cyopen": "cypress open",
     "cy:run:all:chrome": "cypress run --browser chrome; echo \"Testing complete.\"",
     "cy:run:spec": "cypress run --browser chrome --spec",
-    "cleanup": "",
+    "cleanup": "rm -fr mochawesome-report && rm -fr junit_report && rm -fr cypress/logs/",
     "merge_junit_reports": "junit-merge -d junit_report -o junit_report/merged.xml",
     "merge_mochawesome_reports": "mochawesome-merge mochawesome-report/*.json > mochawesome-report/output_merged.json",
     "generate_mochawesome_report": "marge mochawesome-report/output_merged.json",
