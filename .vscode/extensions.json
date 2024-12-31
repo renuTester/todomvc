@@ -1,0 +1,33 @@
+{
+  "recommendations": [
+    "vscode-icons-team.vscode-icons",
+    "oliversturm.fix-json",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "truman.autocomplate-shell",
+    "timonwong.shellcheck",
+    "foxundermoon.shell-format",
+    "redhat.vscode-yaml",
+    "maarti.jenkins-doc",
+    "recode4dev.jenkinsfile",
+    "dontshavetheyak.groovy-guru",
+    "spoonscen.es6-mocha-snippets",
+    "ms-azuretools.vscode-docker",
+    "eamodio.gitlens",
+    "donjayamanne.githistory",
+    "github.vscode-pull-request-github",
+    "streetsidesoftware.code-spell-checker",
+    "jgclark.vscode-todo-highlight",
+    "shevtsov.vscode-cy-helper",
+    "andrew-codes.cypress-snippets",
+    "robertguss.cypress-command-docs",
+    "christian-kohler.npm-intellisense",
+    "better-comments.barrett",
+    "mhutchie.git-graph",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "kisstkondoros.vscode-codemetrics",
+    "mikestead.dotenv",
+    "hashivim.vscode-consul",
+    "coenraads.bracket-pair-colorizer-2"
+  ]
+}

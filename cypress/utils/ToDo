@@ -1,0 +1,7 @@
+const ToDoItem = ({
+      ITEM_ONE: 'Item 1',
+      ITEM_TWO: 'Item 2',
+      ITEM_THREE: 'Item 3'
+});
+
+export default ToDoItem;

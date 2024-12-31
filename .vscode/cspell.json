@@ -1,0 +1,11 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+  ],
+  "enabledLanguageIds": ["git-commit", "gitcommit", "javascript", "javascriptreact", "json", "plaintext", "text", "typescript", "typescriptreact", "yaml", "yml"],
+  "ignorePaths": [".groovylintrc.json", "node_modules/**", "mochawesome-report", "junit_report", ".vscode/**", ".lintstagedrc.json", "cypress_func_other_custom_run.config.ts"]
+}
+
+
+//npm nvm node

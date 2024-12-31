@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "module": "ESNext",
+    "target": "ES6",
+    "lib": ["ESNext"],
+    "baseUrl": "./"
+  },
+  "include": [
+    "cypress/**/*.ts",
+    "cypress/**/*.tsx",
+    "cypress/support/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
