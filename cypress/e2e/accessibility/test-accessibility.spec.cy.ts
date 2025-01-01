@@ -5,12 +5,12 @@ import { Items } from "../../utils/data"
 
 describe('Todo App - Accessibility Testing', function () {
 
-  beforeEach(function () {
+  beforeEach('visiting the app homepage', function () {
     //Visiting the main page of the app
     cy.visit('/')
   })
 
-  context('Check Accessibility', () => {
+  context('Check accessibility', () => {
 
     beforeEach(() => {
       // inject axe core lib into the app
@@ -34,5 +34,4 @@ describe('Todo App - Accessibility Testing', function () {
       });
     })
   })
-
 })

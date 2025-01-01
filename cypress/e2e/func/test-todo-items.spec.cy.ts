@@ -2,17 +2,17 @@
 /// <reference types="../../support" />
 
 import { Items, TotalItems, ItemsLeft } from "../../utils/data"
-import Keys from "../../utils/keys"
+import {Keys} from "../../utils/keys"
 
 describe('Todo App - Multiple ToDo Items', function () {
 
-  beforeEach(function () {
+  beforeEach('visiting the app homepage', function () {
     cy.visit('/')
   })
 
   context('When app has multiple ToDo items', function () {
 
-    beforeEach(function () {
+    beforeEach('adding default todos', function () {
       cy.createTodos(Items.ItemOne, Items.ItemTwo, Items.ItemThree)
     })
 
@@ -112,6 +112,4 @@ describe('Todo App - Multiple ToDo Items', function () {
       cy.get('ul.todo-list li label').should('have.text', `${Items.ItemOne}${Items.ItemTwo}`)
     })
   })
-
-
 })

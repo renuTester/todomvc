@@ -2,11 +2,11 @@
 /// <reference types="../../support" />
 
 import { Items, ItemsLeft } from "../../utils/data"
-import Keys from "../../utils/keys"
+import {Keys} from "../../utils/keys"
 
 describe('Todo App - New Todo Item', function () {
 
-  beforeEach(function () {
+  beforeEach('visiting the app homepage and adding todos', function () {
     cy.visit('/')
   })
 
@@ -50,8 +50,4 @@ describe('Todo App - New Todo Item', function () {
       cy.get('ul.todo-list li label').first().should('have.text', Items.ItemOne)
     })
   })
-
-
-
-
 })

@@ -1,7 +1,5 @@
-const Keys = Object.freeze({
+export const Keys = Object.freeze({
     Enter: '{enter}',
     Esc: '{esc}',
     Tab: '{tab}'
 });
-
-export default Keys;

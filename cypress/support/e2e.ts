@@ -13,8 +13,9 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
-// Import commands.js using ES2015 syntax:
 import cypress from 'cypress'
 import './commands'
-require('cypress-axe')
-require('cypress-plugin-tab')
+import 'cypress-axe'
+import 'cypress-plugin-tab'
+//require('cypress-axe')
+//require('cypress-plugin-tab')

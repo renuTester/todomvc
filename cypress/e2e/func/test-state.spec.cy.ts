@@ -5,7 +5,7 @@ import { Items } from "../../utils/data"
 
 describe('Todo App - Data and State', function () {
 
-  beforeEach(function () {
+  beforeEach('visiting the app homepage and adding todos', function () {
     cy.visit('/')
     cy.createTodos(Items.ItemOne, Items.ItemTwo, Items.ItemThree)
   })

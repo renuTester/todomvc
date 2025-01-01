@@ -2,11 +2,11 @@
 /// <reference types="../../support" />
 
 import { Items, ItemsLeft } from "../../utils/data"
-import Keys from "../../utils/keys"
+import {Keys} from "../../utils/keys"
 
 describe('Todo App - Items Left Counter', function () {
 
-  beforeEach(function () {
+  beforeEach('visiting the app homepage',function () {
     cy.visit('/')
   })
 
@@ -33,5 +33,4 @@ describe('Todo App - Items Left Counter', function () {
       cy.get('span.todo-count').contains(`${ItemsLeft.Zero}`)
     })
   })
-
 })

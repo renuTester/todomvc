@@ -1,9 +1,11 @@
 /// <reference types="cypress" />
 /// <reference types="../../support" />
 
+import { Text } from "../../utils/data"
+
 describe('Todo App - Empty Page', function () {
 
-  beforeEach(function () {
+  beforeEach('visiting the app homepage', function () {
     cy.visit('/')
   })
 
@@ -14,7 +16,7 @@ describe('Todo App - Empty Page', function () {
     })
 
     it('should display "What needs to be done?" as a placeholder in todo input field', function () {
-      cy.get('.new-todo').should('have.attr', 'placeholder', 'What needs to be done?')
+      cy.get('.new-todo').should('have.attr', 'placeholder', Text.WhatNeedsToBeDone)
     })
 
     it('should display the todos header in red and center aligned', function () {
@@ -24,7 +26,7 @@ describe('Todo App - Empty Page', function () {
     })
 
     it('should display the information section at bottom of the page', function () {
-      cy.get('footer.info').should('be.visible').should('contain.text', 'Double-click to edit a todo')
+      cy.get('footer.info').should('be.visible').should('contain.text', Text.DoubleClickToEditToDo)
     })
   })
 

@@ -1,13 +1,11 @@
 /// <reference types="cypress" />
 /// <reference types="../../support" />
 
-import { Items, TotalItems } from "../../utils/data"
-import Keys from "../../utils/keys"
+import { Items, TotalItems, Text } from "../../utils/data"
 
 describe('Todo App - Clear Completed Button', function () {
 
-
-  beforeEach(function () {
+  beforeEach('visiting the app homepage and add todos', function () {
     //Visiting the main page of the app and loaded the 3 todo
     cy.visit('/')
     cy.createTodos(Items.ItemOne, Items.ItemTwo, Items.ItemThree)
@@ -16,7 +14,7 @@ describe('Todo App - Clear Completed Button', function () {
   context('Clear completed button', function () {
 
     it('should display the correct text', function () {
-      cy.get('button.clear-completed').should('have.text', 'Clear completed')
+      cy.get('button.clear-completed').should('have.text', Text.ClearCompleted)
     })
 
     it('should only delete the completed items when clicked', function () {
@@ -35,6 +33,4 @@ describe('Todo App - Clear Completed Button', function () {
       cy.get('button.clear-completed').should('not.exist')
     })
   })
-
-
 })

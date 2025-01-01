@@ -12,7 +12,7 @@ export const Filter = Object.freeze({
 
 export const ItemsLeft = Object.freeze({
     Zero: '0 items left!',
-    One: '1  item left!',
+    One: '1 item left!',
     Two: '2 items left!',
     Three: '3 items left!'
 });
@@ -23,3 +23,10 @@ export const TotalItems = Object.freeze({
     Two: 2,
     Three: 3
 });
+
+export const Text = Object.freeze({
+  EditToDoInput: 'Edit Todo Input"',
+  ClearCompleted: 'Clear completed',
+  WhatNeedsToBeDone: 'What needs to be done?',
+  DoubleClickToEditToDo: 'Double-click to edit a todo',
+})
