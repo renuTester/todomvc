@@ -62,7 +62,7 @@
     "editor.defaultFormatter": "eriklynd.json-tools"
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "json.format.enable": false
 }

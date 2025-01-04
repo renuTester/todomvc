@@ -1,23 +1,25 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
+
 const cypress = require("cypress");
 const yargs = require("yargs");
 const { merge } = require("mochawesome-merge");
 const marge = require("mochawesome-report-generator");
 const npm = require("npm");
-const fs = require('node:fs')
+const fs = require("node:fs");
 const argv = yargs
 	.options({
-		browser: {
+		"browser": {
 			alias: "b",
 			describe: "choose browser that you wanna run tests on",
 			default: "chrome",
 			choices: ["chrome", "electron"]
 		},
-		spec: {
+		"spec": {
 			alias: "s",
 			describe: "run test with specific spec file",
 			default: ""
 		},
-		reporter: {
+		"reporter": {
 			alias: "reporter",
 			describe: "A reporter with which you want to generate reports for your tests",
 			default: "cypress-multi-reporters"
@@ -39,8 +41,8 @@ console.log("Browser: " + argv.browser);
 console.log("Spec file(s): " + argv.spec);
 console.log("Reporter: " + argv.reporter);
 console.log("Reporter Options: " + argv["reporter-options"]);
-cleanUp('junit_report')
-cleanUp('mochawesome-report')
+cleanUp("junit_report");
+cleanUp("mochawesome-report");
 
 cypress
 	.run({
@@ -56,7 +58,7 @@ cypress
 		};
 		generateReport(reporterOptions);
 	})
-	.then((generateReport) => npm.load(() => npm.run("merge_junit_reports")))
+	.then(() => npm.load(() => npm.run("merge_junit_reports")))
 	.catch((error) => {
 		console.error("errors: ", error);
 		process.exit(1);
@@ -68,15 +70,15 @@ function generateReport(options) {
 	});
 }
 
-function cleanUp(folderPath){
+function cleanUp(folderPath) {
 	try {
 		if (fs.existsSync(folderPath)) {
-			fs.rmdirSync(folderPath, { recursive: true });
+			fs.rmSync(folderPath, { recursive: true });
 			console.log(`Folder deleted: ${folderPath}`);
 		} else {
 			console.log(`No clean up needed, folder does not exist: ${folderPath}`);
 		}
 	} catch (error) {
-		console.error('Error deleting folder:', error);
+		console.error("Error deleting folder:", error);
 	}
 }

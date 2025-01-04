@@ -24,7 +24,9 @@
 		"lint": "eslint --ignore-pattern node_modules/",
 		"lint_fix": "eslint --fix --ignore-pattern node_modules/",
 		"lint_groovy": "npm-groovy-lint",
-		"knip": "knip"
+		"knip": "knip",
+		"postinstall": "husky install",
+		"prepare": "husky"
 	},
 	"repository": {
 		"type": "git",

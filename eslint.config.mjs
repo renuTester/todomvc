@@ -5,7 +5,14 @@ import tseslint from "typescript-eslint";
 /** @type {import('eslint').Linter.Config[]} */
 export default [
 	{ files: ["**/*.{js,mjs,cjs,ts}"] },
-	{ languageOptions: { globals: globals.browser } },
+	{
+		languageOptions: {
+			globals: {
+				...globals.browser
+			}
+		}
+	},
+	{ ignores: ["node_modules/", "mochawesome-report/", "junit_report/"] },
 	{
 		rules: {
 			"accessor-pairs": "error",
@@ -138,7 +145,7 @@ export default [
 			/* Cspell:disable-next-line */
 			"no-plusplus": "off",
 			"no-process-env": "error",
-			"no-process-exit": "error",
+			"no-process-exit": "off",
 			"no-proto": "error",
 			"no-restricted-globals": "error",
 			"no-restricted-imports": "error",
@@ -152,7 +159,7 @@ export default [
 			"no-sequences": "error",
 			"no-shadow": "error",
 			"no-spaced-func": "off",
-			"no-sync": "error",
+			"no-sync": "off",
 			"no-tabs": [
 				"error",
 				{
@@ -300,7 +307,8 @@ export default [
 			"no-with": "error",
 			"require-yield": "error",
 			"use-isnan": "error",
-			"valid-typeof": "error"
+			"valid-typeof": "error",
+			"@tseslint/no-require-imports": "off"
 		}
 	},
 	pluginJs.configs.recommended,

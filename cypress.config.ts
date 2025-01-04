@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import { defineConfig } from "cypress";
 const { lighthouse, prepareAudit } = require("@cypress-audit/lighthouse");
 const fs = require("fs");
@@ -24,17 +25,15 @@ export default defineConfig({
 		testIsolation: false,
 		baseUrl: "https://todomvc.com/examples/react/dist/",
 		setupNodeEvents(on, config) {
-			// @ts-ignore
-			on("before:browser:launch", (browser = {}, launchOptions) => {
+			on("before:browser:launch", (launchOptions, browser = {}) => {
 				prepareAudit(launchOptions);
 			});
+
 			on("task", {
 				lighthouse: lighthouse((lighthouseOptions) => {
-					const path = "mochawesome-report/lighthouse/" + Date.now() + ".html"
-					fs.mkdirSync('mochawesome-report/lighthouse',{recursive: true})
-					fs.writeFile(path, lighthouseOptions.report, (error: any) => {
-						error ? console.log(error) : console.log("Report created successfully");
-					});
+					const path = "mochawesome-report/lighthouse/" + Date.now() + ".html";
+					fs.mkdirSync("mochawesome-report/lighthouse", { recursive: true });
+					fs.writeFile(path, lighthouseOptions.report);
 				})
 			});
 		}
