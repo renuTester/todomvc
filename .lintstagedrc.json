@@ -1,5 +1,5 @@
 {
-  "*.ts": ["prettier --write", "npm run lint_fix", "npm run lint", "npx cspell lint --no-must-find-files"],
-  "*.js": ["prettier --write", "npm run lint_fix", "npm run lint", "npx cspell lint --no-must-find-files"],
-  "*.json": ["prettier --write", "npx cspell lint --no-must-find-files"]
+	"*.ts": ["prettier --write", "npm run lint-auto-fix", "npm run lint", "npx cspell lint --no-must-find-files"],
+	"*.js": ["prettier --write", "npm run lint-auto-fix", "npm run lint", "npx cspell lint --no-must-find-files"],
+	"*.json": ["prettier --write", "npx cspell lint --no-must-find-files"]
 }
