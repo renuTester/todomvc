@@ -152,3 +152,18 @@ Tags tries
 
 
 
+# Project Setup
+
+To get started with the project, run the following commands:
+
+1. **Clone the repository:**
+
+```bash
+git clone <repository_url>
+
+cd <project_folder>
+
+cd <project_folder>
+
+npm run setup  # or ./setup.sh (if using shell script)
+

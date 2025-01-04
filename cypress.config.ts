@@ -25,10 +25,9 @@ export default defineConfig({
 		testIsolation: false,
 		baseUrl: "https://todomvc.com/examples/react/dist/",
 		setupNodeEvents(on, config) {
-			on("before:browser:launch", (launchOptions, browser = {}) => {
+			on("before:browser:launch", (browser = {}, launchOptions) => {
 				prepareAudit(launchOptions);
 			});
-
 			on("task", {
 				lighthouse: lighthouse((lighthouseOptions) => {
 					const path = "mochawesome-report/lighthouse/" + Date.now() + ".html";
