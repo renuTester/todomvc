@@ -1,68 +1,62 @@
 {
-  "editor.tabSize": 2,
-  "editor.insertSpaces": true,
-  "editor.detectIndentation": false,
-  "editor.formatOnSave": true,
-  "editor.wordWrap": "on",
-  "editor.quickSuggestions": { "strings": true },
-  "files.exclude": {
-    "**/.git": false,
-    "**/.folder": false,
-    "**/.hidden": false,
-    "explorer.fileFilters.showHidden": true
-  },
+	"editor.tabSize": 2,
+	"editor.insertSpaces": true,
+	"editor.detectIndentation": false,
+	"editor.formatOnSave": true,
+	"editor.wordWrap": "on",
+	"editor.quickSuggestions": { "strings": true },
+	"files.exclude": {
+		"**/.git": false,
+		"**/.folder": false,
+		"**/.hidden": false,
+		"explorer.fileFilters.showHidden": true
+	},
 
-  // Prettier and ESLint settings
-  "prettier.requireConfig": true,
-  "eslint.alwaysShowStatus": true,
-  "eslint.validate": [
-    "javascript",
-    "typescript",
-    "javascriptreact",
-    "typescriptreact",
-    "json"
-  ],
-  "eslint.autoFixOnSave": true,
-  "eslint.codeActionsOnSave.mode": "all",
+	// Prettier and ESLint settings
+	"prettier.requireConfig": true,
+	"eslint.alwaysShowStatus": true,
+	"eslint.validate": ["javascript", "typescript", "javascriptreact", "typescriptreact", "json"],
+	"eslint.autoFixOnSave": true,
+	"eslint.codeActionsOnSave.mode": "all",
 
-  // JavaScript/TypeScript settings
-  "javascript.validate.enable": true,
-  "typescript.validate.enable": true,
-  "typescript.tsdk": "node_modules/typescript/lib", 
+	// JavaScript/TypeScript settings
+	"javascript.validate.enable": true,
+	"typescript.validate.enable": true,
+	"typescript.tsdk": "node_modules/typescript/lib",
 
-  // Files to auto save
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 1000,
+	// Files to auto save
+	"files.autoSave": "afterDelay",
+	"files.autoSaveDelay": 1000,
 
-  // Terminal settings
-  "terminal.integrated.fontSize": 14,
+	// Terminal settings
+	"terminal.integrated.fontSize": 14,
 
-  // Git and version control
-  "git.enableSmartCommit": true,
-  "git.autofetch": true,
-  "git.confirmSync": false,
-  "git.enableCommitSigning": true,
+	// Git and version control
+	"git.enableSmartCommit": true,
+	"git.autofetch": true,
+	"git.confirmSync": false,
+	"git.enableCommitSigning": true,
 
-  // Other productivity improvements
-  "workbench.colorTheme": "Visual Studio Light",
-  "editor.renderWhitespace": "boundary",
-  "window.zoomLevel": 0,
+	// Other productivity improvements
+	"workbench.colorTheme": "Visual Studio Light",
+	"editor.renderWhitespace": "boundary",
+	"window.zoomLevel": 0,
 
-  // Language specific settings (JavaScript, TypeScript, and Cypress)
-  "[javascript]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "eriklynd.json-tools"
-  },
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
-  "json.format.enable": false
+	// Language specific settings (JavaScript, TypeScript, and Cypress)
+	"[javascript]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "eriklynd.json-tools"
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	"json.format.enable": false
 }

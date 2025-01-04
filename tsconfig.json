@@ -4,7 +4,7 @@
 		"target": "ESNext",
 		"module": "ESNext",
 		"lib": ["es6", "es2017", "dom"],
-		"types": ["node", "cypress", "cypress-wait-until"],
+		"types": ["node", "cypress"],
 		"allowSyntheticDefaultImports": true,
 		"baseUrl": "/",
 		"moduleResolution": "node",
