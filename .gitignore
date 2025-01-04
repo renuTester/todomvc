@@ -1,5 +1,6 @@
 # Node.js dependencies
 node_modules/
 
+# Test Output
 mochawesome-report/
-junit-report/
+junit_report/

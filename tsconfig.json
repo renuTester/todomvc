@@ -1,15 +1,17 @@
 {
-  "compilerOptions": {
-      "allowJs": true,
-      "target": "es6",
-      "lib": ["es6", "es2017", "dom"],
-      "types": ["node", "cypress", "@types/testing-library__cypress", "cypress-wait-until"],
-      "allowSyntheticDefaultImports": true,
-      "baseUrl": "/",
-      "moduleResolution": "node",
-      "strict": true,
-      "esModuleInterop": true
-  },
-  "include": ["**/*.ts"],
-  "exclude": ["node_modules"]
+	"compilerOptions": {
+		"allowJs": true,
+		"target": "ESNext",
+		"module": "ESNext",
+		"lib": ["es6", "es2017", "dom"],
+		"types": ["node", "cypress", "cypress-wait-until"],
+		"allowSyntheticDefaultImports": true,
+		"baseUrl": "/",
+		"moduleResolution": "node",
+		"strict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true
+	},
+	"include": ["**/*.ts"],
+	"exclude": ["node_modules"]
 }

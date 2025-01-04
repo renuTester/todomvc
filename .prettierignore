@@ -1,0 +1,5 @@
+cypress/downloads/**
+cypress/logs/**
+junit_report/**
+mochawesome-report/**
+node_modules/**

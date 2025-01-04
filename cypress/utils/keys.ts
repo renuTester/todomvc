@@ -1,5 +1,5 @@
 export const Keys = Object.freeze({
-    Enter: '{enter}',
-    Esc: '{esc}',
-    Tab: '{tab}'
+	Enter: '{enter}',
+	Esc: '{esc}',
+	Tab: '{tab}'
 });
