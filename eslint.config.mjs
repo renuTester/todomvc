@@ -67,8 +67,6 @@ export default [
 			"key-spacing": "off",
 			"keyword-spacing": "error",
 			"line-comment-position": "off",
-			/* Cspell:disable-next-line */
-			"linebreak-style": ["error", "unix"],
 			"lines-around-comment": "off",
 			"lines-around-directive": "error",
 			"lines-between-class-members": "off",
