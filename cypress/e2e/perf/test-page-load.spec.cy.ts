@@ -3,7 +3,7 @@
 
 import { PageLoad } from "../../utils/config";
 
-describe("Todo App - Page Load", () => {
+describe("Todo App - Page Load", { retries: 0 }, () => {
 	context("Page load time", () => {
 		it("should be with in the permissible limit", () => {
 			cy.visit("https://todomvc.com/examples/react/dist/", {

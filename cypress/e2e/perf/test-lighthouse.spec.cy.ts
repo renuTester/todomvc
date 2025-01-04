@@ -3,7 +3,7 @@
 
 import { LighthouseFlagsDesktop, LighthouseThresholds, LighthouseFlagsDesktopSlow, LighthouseOptions } from "../../utils/config";
 
-describe("ToDo App - Lighthouse Audit", () => {
+describe("ToDo App - Lighthouse Audit", { retries: 0 }, () => {
 	beforeEach("Visit App Initial Page", () => {
 		cy.visit("/");
 	});

@@ -6,13 +6,14 @@ const { merge } = require("mochawesome-merge");
 const marge = require("mochawesome-report-generator");
 const npm = require("npm");
 const fs = require("node:fs");
+const os = require("os");
 const argv = yargs
 	.options({
 		"browser": {
 			alias: "b",
 			describe: "choose browser that you wanna run tests on",
 			default: "chrome",
-			choices: ["chrome", "electron"]
+			choices: ["chrome", "electron", "firefox"]
 		},
 		"spec": {
 			alias: "s",
@@ -58,7 +59,24 @@ cypress
 		};
 		generateReport(reporterOptions);
 	})
-	.then(() => npm.load(() => npm.run("merge_junit_reports")))
+	.then(() =>
+		npm.load(() => {
+			npm.run("merge_junit_reports");
+			const platform = os.platform();
+			if (platform === "win32") {
+				console.log("Running on Windows");
+				npm.run("open-report-win");
+			} else if (platform === "darwin") {
+				console.log("Running on macOS");
+				npm.run("open-report-mac");
+			} else if (platform === "linux") {
+				console.log("Running on Linux");
+				npm.run("open-report-linux");
+			} else {
+				console.log("Unknown platform");
+			}
+		})
+	)
 	.catch((error) => {
 		console.error("errors: ", error);
 		process.exit(1);
