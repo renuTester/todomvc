@@ -1,7 +1,6 @@
 // / <reference types="cypress" />
 // / <reference types="../../support" />
 
-import { Tags } from "../../utils/config";
 import { Items, TotalItems, ItemsLeft } from "../../utils/data";
 import { Keys } from "../../utils/keys";
 
@@ -29,7 +28,7 @@ describe("Todo App - Multiple ToDo Items", function () {
 			cy.get("span.todo-count").should("have.text", ItemsLeft.Three);
 		});
 
-		it([Tags.Smoke], "should allow to complete all items", function () {
+		it("should allow to complete all items", function () {
 			cy.get('li[class=""] input')
 				.should("have.length", TotalItems.Three)
 				.each((item) => {
@@ -42,7 +41,7 @@ describe("Todo App - Multiple ToDo Items", function () {
 				});
 		});
 
-		it([Tags.Smoke], "should allow to undo all completed items", function () {
+		it("should allow to undo all completed items", function () {
 			cy.get('li[class=""] input')
 				.should("have.length", TotalItems.Three)
 				.each((item) => {
@@ -60,7 +59,7 @@ describe("Todo App - Multiple ToDo Items", function () {
 				});
 		});
 
-		it([Tags.Smoke], 'should check or uncheck all items when "toggle-all" button is clicked', function () {
+		it('should check or uncheck all items when "toggle-all" button is clicked', function () {
 			cy.get("input.toggle-all").check().should("be.checked");
 			cy.get("span.todo-count").should("have.text", `${ItemsLeft.Zero}`);
 			cy.get("ul.todo-list li")
@@ -77,7 +76,7 @@ describe("Todo App - Multiple ToDo Items", function () {
 				});
 		});
 
-		it([Tags.Smoke], 'should delete all the completed items when "Clear completed" button is clicked', function () {
+		it('should delete all the completed items when "Clear completed" button is clicked', function () {
 			cy.get("input.toggle-all").check().should("be.checked");
 			cy.get("button.clear-completed").click({ force: true });
 			cy.get("ul.todo-list li").should("not.exist");
@@ -86,13 +85,13 @@ describe("Todo App - Multiple ToDo Items", function () {
 	});
 
 	context("If I have an to-do item", function () {
-		it([Tags.Smoke], "should allow to mark that item as complete", function () {
+		it("should allow to mark that item as complete", function () {
 			cy.get("input.new-todo").type(`${Items.ItemOne}${Keys.Enter}`);
 			cy.get("ul.todo-list li input").check();
 			cy.get("ul.todo-list li").should("have.class", "completed");
 		});
 
-		it([Tags.Smoke], "should allow me to uncheck that item as complete", function () {
+		it("should allow me to uncheck that item as complete", function () {
 			cy.get("input.new-todo").type(`${Items.ItemOne}${Keys.Enter}`);
 			cy.get("ul.todo-list li input").check();
 			cy.get("ul.todo-list li").should("have.class", "completed");

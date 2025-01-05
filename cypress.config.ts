@@ -25,7 +25,7 @@ export default defineConfig({
 			}
 		},
 		slowTestThreshold: 10000,
-		specPattern: "cypress/e2e/accessibility/*.spec.cy.ts",
+		specPattern: "cypress/e2e/*/*.spec.cy.ts",
 		testIsolation: false,
 		baseUrl: "https://todomvc.com/examples/react/dist/",
 		retries: {

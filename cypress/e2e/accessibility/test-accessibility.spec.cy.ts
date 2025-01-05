@@ -1,10 +1,9 @@
 // / <reference types="cypress" />
 // / <reference types="../../support" />
 
-import { Tags } from "../../utils/config";
 import { Items } from "../../utils/data";
 
-describe([Tags.Accessibility], "Todo App - Accessibility Testing", function () {
+describe("Todo App - Accessibility Testing", function () {
 	beforeEach("visiting the app homepage", function () {
 		// Visiting the main page of the app
 		cy.visit("/");

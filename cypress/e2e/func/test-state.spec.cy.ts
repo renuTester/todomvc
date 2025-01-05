@@ -1,7 +1,6 @@
 // / <reference types="cypress" />
 // / <reference types="../../support" />
 
-import { Tags } from "../../utils/config";
 import { Items } from "../../utils/data";
 
 describe("Todo App - Data and State", function () {
@@ -19,7 +18,7 @@ describe("Todo App - Data and State", function () {
 			cy.get("ul.todo-list li").should("not.exist");
 		});
 
-		it([Tags.Smoke], "should persist on back navigation of the app", function () {
+		it("should persist on back navigation of the app", function () {
 			// Checking an item, clicking the last filter and then pressing back button to see if data exist
 			cy.get("ul.todo-list li input").first().check();
 			cy.get("ul.todo-list li.completed").should("have.length", 1);

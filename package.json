@@ -45,7 +45,6 @@
 		"cypress-axe": "^1.5.0",
 		"cypress-multi-reporters": "^1.2.4",
 		"cypress-plugin-tab": "^1.0.5",
-		"cypress-tags": "^1.2.2",
 		"eslint": "^9.17.0",
 		"geckodriver": "^5.0.0",
 		"globals": "^15.14.0",

@@ -1,7 +1,6 @@
 # todomvc
+
 UI Automation of ToDo MVC App
-
-
 
 Cypress Automation Framework
 Overview
@@ -19,12 +18,12 @@ Installation
 Follow these steps to install the framework and get started with Cypress.
 
 1. Clone the Repository
-bash
-Copy code
-git clone https://your-repo-url.git
-cd your-repo-name
+   bash
+   Copy code
+   git clone https://your-repo-url.git
+   cd your-repo-name
 2. Install Node.js Dependencies
-Ensure you have Node.js and npm installed. For the required versions, see Environment Setup.
+   Ensure you have Node.js and npm installed. For the required versions, see Environment Setup.
 
 bash
 Copy code
@@ -119,14 +118,12 @@ If you would like to contribute to the project, please fork the repository and c
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-
-
 THere can be lot of untested use cases. - example mouse hover an element and click the delete button
 soft and hard assert
 why we use object.freeze
 only and skip >> multiple it with only and multiple it with skip
 beforeEach at describe level and context level, which will execute
-eachmethod
+each method
 why we use . to get() commands
 why we use css selector like element.class instead of .class
 TAB plugin
@@ -144,13 +141,12 @@ hard coded stings can be deleted
 cy.get().contains() vs cy.get().should('have.text', '') //it match the full sting not a substring
 Meaning and use of each file
 Basic of Accessibility - a11y - https://www.browserstack.com/accessibility-testing/what-is-accessibility-testing
-check / uncheck all matching 
-      cy.get('ul.todo-list li input').check()
+check / uncheck all matching
+cy.get('ul.todo-list li input').check()
 
       patten to match in should have.text in todo spec file
+
 Tags tries
-
-
 
 # Project Setup
 
@@ -167,3 +163,4 @@ cd <project_folder>
 
 npm run setup  # or ./setup.sh (if using shell script)
 
+```
