@@ -1,9 +1,9 @@
 // / <reference types="cypress" />
 // / <reference types="../../support" />
 
-import { LighthouseFlagsDesktop, LighthouseThresholds, LighthouseFlagsDesktopSlow, LighthouseOptions } from "../../utils/config";
+import { LighthouseFlagsDesktop, LighthouseThresholds, LighthouseFlagsDesktopSlow, LighthouseOptions, Tags } from "../../utils/config";
 
-describe("ToDo App - Lighthouse Audit", { retries: 0 }, () => {
+describe([Tags.Performance], "ToDo App - Lighthouse Audit", { retries: 0 }, () => {
 	beforeEach("Visit App Initial Page", () => {
 		cy.visit("/");
 	});

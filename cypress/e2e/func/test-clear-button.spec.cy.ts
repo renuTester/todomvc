@@ -1,6 +1,7 @@
 // / <reference types="cypress" />
 // / <reference types="../../support" />
 
+import { Tags } from "../../utils/config";
 import { Items, TotalItems, Text } from "../../utils/data";
 
 describe("Todo App - Clear Completed Button", function () {
@@ -11,11 +12,11 @@ describe("Todo App - Clear Completed Button", function () {
 	});
 
 	context("Clear completed button", function () {
-		it("should display the correct text", function () {
+		it([Tags.Smoke], "should display the correct text", function () {
 			cy.get("button.clear-completed").should("have.text", Text.ClearCompleted);
 		});
 
-		it("should only delete the completed items when clicked", function () {
+		it([Tags.Smoke], "should only delete the completed items when clicked", function () {
 			cy.get("ul.todo-list li").should("have.length", TotalItems.Three);
 			cy.get("ul.todo-list li input").first().check();
 			cy.get("button.clear-completed").click();

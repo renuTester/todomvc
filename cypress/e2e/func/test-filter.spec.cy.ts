@@ -1,6 +1,7 @@
 // / <reference types="cypress" />
 // / <reference types="../../support" />
 
+import { Tags } from "../../utils/config";
 import { Items, Filter, TotalItems } from "../../utils/data";
 
 describe("Todo App - Filters", function () {
@@ -12,17 +13,17 @@ describe("Todo App - Filters", function () {
 	});
 
 	context("Filter", function () {
-		it("all items should be displayed in All filter", function () {
+		it([Tags.Smoke], "all items should be displayed in All filter", function () {
 			cy.get("ul.todo-list li.completed").should("have.length", 1);
 			cy.get("ul.todo-list li").should("have.length", TotalItems.Three);
 		});
 
-		it("all not completed items should be displayed in Active filter", function () {
+		it([Tags.Smoke], "all not completed items should be displayed in Active filter", function () {
 			cy.get("ul.filters li").eq(1).click();
 			cy.get("ul.todo-list li").should("have.length", TotalItems.Two);
 		});
 
-		it("all completed items should be displayed in Completed filter", function () {
+		it([Tags.Smoke], "all completed items should be displayed in Completed filter", function () {
 			cy.get("ul.filters li").last().click();
 			cy.get("ul.todo-list li.completed").should("have.length", TotalItems.One);
 		});

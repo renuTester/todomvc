@@ -1,6 +1,7 @@
 // / <reference types="cypress" />
 // / <reference types="../../support" />
 
+import { Tags } from "../../utils/config";
 import { Text } from "../../utils/data";
 
 describe("Todo App - Empty Page", function () {
@@ -9,19 +10,19 @@ describe("Todo App - Empty Page", function () {
 	});
 
 	context("When the app is initially opened", function () {
-		it("should focus on the todo input field", function () {
+		it([Tags.Smoke], "should focus on the todo input field", function () {
 			cy.focused().should("have.class", "new-todo");
 		});
 
-		it('should display "What needs to be done?" as a placeholder in todo input field', function () {
+		it([Tags.Smoke], 'should display "What needs to be done?" as a placeholder in todo input field', function () {
 			cy.get(".new-todo").should("have.attr", "placeholder", Text.WhatNeedsToBeDone);
 		});
 
-		it("should display the todos header in red and center aligned", function () {
+		it([Tags.Smoke], "should display the todos header in red and center aligned", function () {
 			cy.get("h1").should("have.text", "todos").should("have.css", "color", "rgb(184, 63, 69)").should("have.css", "text-align", "center");
 		});
 
-		it("should display the information section at bottom of the page", function () {
+		it([Tags.Smoke], "should display the information section at bottom of the page", function () {
 			cy.get("footer.info").should("be.visible").should("contain.text", Text.DoubleClickToEditToDo);
 		});
 	});

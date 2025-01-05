@@ -1,6 +1,7 @@
 // / <reference types="cypress" />
 // / <reference types="../../support" />
 
+import { Tags } from "../../utils/config";
 import { Items, TotalItems, Text } from "../../utils/data";
 import { Keys } from "../../utils/keys";
 
@@ -48,6 +49,13 @@ describe("Todo App - Edit An Item", function () {
 			cy.get("ul.todo-list li label").first().dblclick();
 			cy.get('div[class="input-container"] input').last().type(`            ${Keys.Enter}`);
 			cy.get("ul.todo-list li label").first().should("have.text", Items.ItemOne);
+		});
+
+		it([Tags.Smoke], "should save on pressing the enter key", function () {
+			cy.get("ul.todo-list li label").first().should("have.text", Items.ItemOne);
+			cy.get("ul.todo-list li label").first().dblclick();
+			cy.get('div[class="input-container"] input').last().type(`${Items.ItemTwo}${Keys.Enter}`);
+			cy.get("ul.todo-list li label").first().should("have.text", `${Items.ItemOne}${Items.ItemTwo}`);
 		});
 	});
 });

@@ -56,3 +56,10 @@ export const LighthouseOptions = {
 export const PageLoad = {
 	Time: 1500
 };
+
+export const Tags = Object.freeze({
+	Smoke: "Smoke",
+	PreDeployment: "PreDeployment",
+	Performance: "Performance",
+	Accessibility: "Accessibility"
+});

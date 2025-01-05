@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
+/* eslint-disable @typescript-eslint/no-unused-vars, default-param-last, @typescript-eslint/no-require-imports */
 import { defineConfig } from "cypress";
 const { lighthouse, prepareAudit } = require("@cypress-audit/lighthouse");
 const fs = require("fs");

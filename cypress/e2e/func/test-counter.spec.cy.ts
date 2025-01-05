@@ -1,6 +1,7 @@
 // / <reference types="cypress" />
 // / <reference types="../../support" />
 
+import { Tags } from "../../utils/config";
 import { Items, ItemsLeft } from "../../utils/data";
 import { Keys } from "../../utils/keys";
 
@@ -10,7 +11,7 @@ describe("Todo App - Items Left Counter", function () {
 	});
 
 	context("Items left counter", function () {
-		it("should go up as we keep on adding items", function () {
+		it([Tags.Smoke], "should go up as we keep on adding items", function () {
 			// Adding the todo item one by one and checking the items left
 			cy.get("input.new-todo").type(`${Items.ItemOne}${Keys.Enter}`);
 			cy.get("span.todo-count").contains(`${ItemsLeft.One}`);

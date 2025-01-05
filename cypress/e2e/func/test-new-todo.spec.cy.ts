@@ -1,6 +1,7 @@
 // / <reference types="cypress" />
 // / <reference types="../../support" />
 
+import { Tags } from "../../utils/config";
 import { Items, ItemsLeft } from "../../utils/data";
 import { Keys } from "../../utils/keys";
 
@@ -10,7 +11,7 @@ describe("Todo App - New Todo Item", function () {
 	});
 
 	context("If I want to create a new Todo", function () {
-		it("should allow me to add todo items one by one", function () {
+		it([Tags.Smoke], "should allow me to add todo items one by one", function () {
 			// Adding a to-do item and checking its label
 			cy.get("input.new-todo").type(`${Items.ItemOne}${Keys.Enter}`);
 			cy.get("ul.todo-list li label").first().should("have.text", Items.ItemOne);
@@ -30,7 +31,7 @@ describe("Todo App - New Todo Item", function () {
 			cy.get("input.new-todo").should("be.empty");
 		});
 
-		it("should place new items to the bottom", function () {
+		it([Tags.Smoke], "should place new items to the bottom", function () {
 			cy.get("input.new-todo").type(`${Items.ItemOne}${Keys.Enter}`).type(`${Items.ItemTwo}${Keys.Enter}`).type(`${Items.ItemThree}${Keys.Enter}`);
 
 			cy.get("ul.todo-list li label").last().should("have.text", Items.ItemThree);
