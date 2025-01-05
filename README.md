@@ -126,27 +126,23 @@ This will only run the example_spec.js test file.
 * `tsconfig.json`: TypeScript configuration file that defines compiler options like target ECMAScript version, module system, and other settings related to compiling TypeScript code.
   
 # Implemented Features
-**End-to-End Testing:**  Automated test cases that validate the overall user experience and behavior of the application.
-**Cross-Browser Testing: Support for multiple browsers, including Chrome, Firefox, and Electron.
-**Cypress Dashboard Integration: Integration with the Cypress Dashboard for test reporting and parallelization (optional).
-**Screenshots and Video Recording: Captures screenshots on failure and records videos of the entire test suite for debugging purposes.
-**Custom Commands: Reusable Cypress custom commands for complex actions, making the tests more maintainable.
+* End-to-End Testing:  Automated test cases that validate the overall user experience and behavior of the application.
+* Cross-Browser Testing: Support for multiple browsers, including Chrome and Firefox.
+* Screenshots and Video: Captures screenshots on failure and videos of the entire test suite for debugging purposes.
+* Custom Commands: Reusable Cypress custom commands for complex actions, making the tests more maintainable.
 
 
 # Good Practices Followed
-**Modular Test Structure: Tests are organized into logical folders and files for easy navigation.
-**Reusable Test Functions: Common test steps are abstracted into reusable commands to avoid duplication.
-**Page Object Model: Implemented the Page Object Model (POM) design pattern to improve maintainability.
-**CI/CD Integration: Cypress is configured to work seamlessly with popular CI/CD tools like Jenkins, GitHub Actions, and CircleCI.
-**Error Handling: Tests include proper error handling and retry mechanisms for flaky elements.
-**Test Reporting: Integrated with test reporters (e.g., Mochawesome) for detailed and user-friendly test reports.
+* Modular Test Structure: Tests are organized into logical folders and files for easy navigation.
+* Reusable Test Functions: Common test steps are abstracted into reusable commands to avoid duplication.
+* Page Object Model: NA, as it is a single page app
+* Error Handling: Tests include proper error handling and retry mechanisms for flaky elements.
+* Test Reporting: Integrated with test reporters (e.g., Mochawesome) for detailed and user-friendly test reports.
 
 Additional Information
-Test Reports: Test reports can be found in the cypress/results folder if you’re using a test reporter like Mochawesome.
+Test Reports: Test reports can be found in the `cypress/mochawesome` and `cypress/mochawesome/lighthouse`
 Cypress Documentation: For more detailed information on Cypress commands and configurations, refer to the official Cypress documentation: https://docs.cypress.io.
-Custom Configurations: You can customize the cypress.json and tsconfig.json files for specific needs (e.g., base URL, test retries, etc.).
-Contributing
-If you would like to contribute to the project, please fork the repository and create a pull request with your changes. Ensure that all tests are passing and follow the coding standards used in the project.
+Custom Configurations: You can customize the `cypress.config.ts` and `tsconfig.json` files for specific needs (e.g., base URL, test retries, etc.).
 
 
 ## Tests
