@@ -139,10 +139,10 @@ This will only run the example_spec.js test file.
 * Error Handling: Tests include proper error handling and retry mechanisms for flaky elements.
 * Test Reporting: Integrated with test reporters (e.g., Mochawesome) for detailed and user-friendly test reports.
 
-Additional Information
-Test Reports: Test reports can be found in the `cypress/mochawesome` and `cypress/mochawesome/lighthouse`
-Cypress Documentation: For more detailed information on Cypress commands and configurations, refer to the official Cypress documentation: https://docs.cypress.io.
-Custom Configurations: You can customize the `cypress.config.ts` and `tsconfig.json` files for specific needs (e.g., base URL, test retries, etc.).
+# Additional Information
+* Test Reports: Test reports can be found in the `cypress/mochawesome` and `cypress/mochawesome/lighthouse`
+* Cypress Documentation: For more detailed information on Cypress commands and configurations, refer to the official Cypress documentation: https://docs.cypress.io.
+* Custom Configurations: You can customize the `cypress.config.ts` and `tsconfig.json` files for specific needs (e.g., base URL, test retries, etc.).
 
 
 ## Tests
