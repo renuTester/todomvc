@@ -15,7 +15,6 @@ Table of contents
    * [Test Execution](#test-execution)
       * [Headless Mode](#headless-mode)
       * [Interactive Mode](#interactive-mode)
-      * [Running Specific Tests](#running-specific-tests)
    * [Structure](#structure)
    * [Implemented Features](#implemented-features)
    * [Good Practices Followed](#good-practices-followed)
@@ -53,7 +52,7 @@ This project is built on NodeJS, it should be insured that below are installed o
   ```sh
   npm -v
   ```
-3. If version displayed is less than 9.x, then use the bellow commands:
+2. If version displayed is less than 9.x, then use the bellow commands:
   ```sh
   npm install -g npm
   ```
@@ -92,13 +91,6 @@ This will launch the Cypress Test Runner, where you can view the tests and their
 ```sh
 npm run test-cy
 ```
-
-### Running Specific Tests
-You can run specific tests using the --spec flag:
-```sh
-npx run "test-cy-chrome" --spec "cypress/e2e/func/example_spec.js"
-```
-This will only run the example_spec.js test file.
 
 ## Structure
 
