@@ -1,98 +1,130 @@
-ToDo MVC App
-=========
 
-This project is a Cypress-based automation framework designed to provide an efficient solution for end-to-end testing of ToDo MVC App using NodeJs and Typescript. It includes automated tests that are easy to maintain, extend, and execute. It demonstrates the Cypress features, testing patterns and framework architecture to achieve the UI, Accessibility and Performance testing. > This application is purely for demonstration and educational purposes. 
+[![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-typescript.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/contains-technical-debt.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/slaying-bugs-crushing-code.svg)](https://forthebadge.com)
+
+# ToDo MVC App - Cypress Automation
+
+  > This project is a `Cypress` based automation framework designed to provide an efficient solution for end-to-end testing of `ToDo MVC` App using `NodeJs` and `Typescript`. It includes automated tests that are easy to maintain, extend, and execute. It demonstrates the Cypress features, testing patterns and framework architecture to achieve the `UI`, `Accessibility` and `Performance` testing. This application is purely for demonstration and educational purposes. 
+
 
 Table of contents
 =================
-
 <!--ts-->
-   * [Pre-requisites](#pre-requisites)
-   * [Additional Tools](#additionalTools)
-   * [Set Up](#setup)
-   * [Usage](#usage)
-      * [STDIN](#stdin)
-   * [Dependency](#dependency)
-   * [Execute Tests](#docker)
-     * [Test Runner](#local)
-     * [Headless Mode](#public)
-   * [Good Practices](#docker)
-   * [About Me](#about)
+   * [Env Set Up](#env-set-up)
+   * [Additional Tools](#additional-tools)
+   * [Set Up](#set-up)
+   * [Test Execution](#test-execution)
+      * [Headless Mode](#headless-mode)
+      * [Interactive Mode](#interactive-mode)
+      * [Running Specific Tests](#running-specific-tests)
+   * [Structure](#structure)
+   * [Implemented Features](#implemented-features)
+   * [Good Practices Followed](#good-practices-followed)
+   * [Additional Information](#additional-information)
+   * [Tests](#tests)
+   * [Additional NPM Scripts](#additional-npm-scripts)
+   * [In Future](#in-future)
+   * [Bugs](#bugs)
 <!--te-->
 
-# Pre-requisites
-As this project is built on NodeJS, we need to ensure that those installed on the system.
-### NodeJS
+# Env Set Up
+This project is built on NodeJS, it should be insured that below are installed on the system:
+
+  * Node.js (Version: v18.x or later)
+  * npm (Version: 9.x or later)
+
 <details>
-   <summary> Project uses Node >= 18.0.0</summary>
-   Check if you have node version > 18.0.0 using below command in terminal or command prompt
-   node -v
-   If the version is less than 18.0.0 or version is not displayed, enter the second command
-   https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/
-   nvm install 18.18.0
-   nvm use 18.18.0
-   Before you can run the tests, you need to have the following software installed:
+<summary>Expand to install or update the Node.js</summary>
 
-Node.js (Version: v16.x or later)
-npm (Version: 8.x or later)
-Cypress (This will be installed automatically with the project dependencies)
-You can verify the installed versions with the following commands:
+1. Open the cmd, terminal and check the Node.js version
+  ```sh
+  node -v
+  ```
+2. If instead of version, some error is displayed, then follow this link to [install nvm](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/) and then follow the step 3.0
+3. If version displayed is less than 18.x, then use the bellow commands:
+  ```sh
+     nvm install 18.18.0
+     nvm use 18.18.0
+  ```
+</details>
+<details>
+<summary>Expand to update the npm</summary>
 
-bash
-Copy code
-node -v
-npm -v
-If Node.js or npm are not installed, you can download and install them from nodejs.org.
+1. Open the cmd, terminal and check the npm version
+  ```sh
+  npm -v
+  ```
+3. If version displayed is less than 9.x, then use the bellow commands:
+  ```sh
+  npm install -g npm
+  ```
 </details>
 
 # Additional Tools
-Visual Studio Code or any other IDE that supports JavaScript/TypeScript.
-Git for version control (if not already installed).
 
-# Set-Up
+* Install any IDE like Visual Studio Code(fast and light-weight) or any IDE that supports JS/TS.
+* Git for version control (if not already installed, check using `git -v` command in terminal/cmd).
 
-1. Checkout or clone this github repository: https://github.com/anshyadav/ryanair.
-   ```bash
-   Copy code
-   git clone https://your-repo-url.git
+# Set Up
+
+1. Open IDE > Open New Terminal
+2. Clone this github repository
+   ```sh
+   git clone <github_clone_path>
    cd todomvc
-2. Install Eclipse (In the Eclipse Installer choose - Eclipse for Java Developers).
+3. Execute the command to install dependencies and set up. This will install all necessary dependencies listed in the package.json file, including Cypress and other libraries required for running the tests.
+   ```sh
+   npm run setup
+   ```
+# Test Execution
+Once you’ve set up your environment, you can run the tests in headless or interactive mode. Once test is completed, it will open the test output.
 
-3. Open Eclipse and check for Maven plugin (Eclipse > Help > Marketplace > Installed). If Maven is not there then install the Maven plugin and restart the Eclipse.
-4. Import the cloned reposiorty as 'Existing Maven Project'.
-5.  Install Node.js Dependencies
-bash
-Copy code
-npm install
-This will install all necessary dependencies listed in the package.json file, including Cypress and other libraries required for running the tests.
+### Headless Mode
+Execute any of the commands depending on browser
+```sh
+npm run "test-cy-chrome"
+```
+```sh
+npm run "test-cy-fox"
+```
 
-
-
-
-Usage
-Running the Cypress Tests
-Once you’ve set up your environment, you can run the tests in headless or interactive mode:
-
-### Headless Mode (for CI/CD pipelines):
-bash
-npx run "test-cy-chrome"
-npx run "test-cy-fox"
-This will run all tests in headless mode (no UI) and output the results in the console.
-
-### Interactive Mode:
-bash
-Copy code
-npx run test-cy
-This will launch the Cypress Test Runner, where you can view the tests and their results in a user-friendly interface.
+### Interactive Mode
+This will launch the Cypress Test Runner, where you can view the tests and their results in interface.
+```sh
+npm run test-cy
+```
 
 ### Running Specific Tests
 You can run specific tests using the --spec flag:
-
-bash
-Copy code
+```sh
 npx run "test-cy-chrome" --spec "cypress/e2e/func/example_spec.js"
+```
 This will only run the example_spec.js test file.
 
+## Structure
+
+* `cypress/e2e/accessibility`: This folder contains test files related to accessibility checks for the application to check the basic structure and accessibility standards are met.
+* `cypress/e2e/func`: It contains the test specs to check the app functionality and do the UI testing.
+* `cypress/e2e/perf`: It contains the spec files to check the app performance using lighthouse tool.
+* `cypress/downloads`: It will contain all the files downloaded in a test execution.
+* `cypress/fixtures`: The fixtures directory typically holds static data used during testing (e.g., JSON files).
+* `cypress/support`: Contains support files for Cypress tests, such as custom commands, global setup functions that can be shared across different test files.
+* `cypress/utils`: Contains utility files that provide helper functions for testing and configurations.
+* `mochawesome-report`: A folder for reports generated by Mochawesome, a test reporter for Mocha. This contains the output of test runs, including results, logs, and visuals.
+* `mochawesome-report/lighthouse`: A folder for reports generated by Lighthouse, a test tool by Alphabet company.
+* `README.md`: The main documentation file for the project. It explains the purpose of the project, how to set up, and how to use the application or test automation scripts.
+* `.gitignore`: This file specifies which files or directories should be ignored by Git. Commonly ignored files include node modules, build artifacts, and configuration files that contain sensitive information.
+* `.lintstagedrc.json`: Configures linting for files before committing them (using tools like ESLint). It ensures that only code following certain style guidelines gets committed.
+* `.prettierignore`: Specifies which files or directories should be ignored by Prettier, the code formatting tool. Prettier typically ignores files like minified code or files that don’t require formatting.
+* `.prettierrc.json`: This configuration file defines the rules for Prettier formatting, such as tab width, single quotes, line length, etc.
+* `CODEOWNERS`: Defines the owners for different parts of this codebase.
+* `config.json`: Configuration file of mochawesome.
+* `cypress_runner.ts`: The main entry point for running Cypress tests in a TypeScript environment. It sets up or configures the environment before running tests.
+* `cypress.config.ts`: The Cypress configuration file for the project. This file configures global settings for Cypress such as timeouts, base URL, integration folder paths, and more.
+* `eslint.config.mjs`: Configuration file for ESLint, to ensures code quality by enforcing coding standards and style rules.
+* `package-lock.json`: It locks down the versions of dependencies and their nested dependencies using sha code, ensuring consistent installs across different environments.
+* `package.json`: Contains metadata about the project, such as the project’s name, version, scripts, dependencies and devDependencies for the project.
+* `tsconfig.json`: TypeScript configuration file that defines compiler options like target ECMAScript version, module system, and other settings related to compiling TypeScript code.
+  
 # Implemented Features
 **End-to-End Testing:**  Automated test cases that validate the overall user experience and behavior of the application.
 **Cross-Browser Testing: Support for multiple browsers, including Chrome, Firefox, and Electron.
@@ -117,64 +149,33 @@ Contributing
 If you would like to contribute to the project, please fork the repository and create a pull request with your changes. Ensure that all tests are passing and follow the coding standards used in the project.
 
 
-
-
-
-### Prerequisites
-
-This project requires [Node.js](https://nodejs.org/en/) to be installed on your machine. Refer to the [.node-version](./.node-version) file for the exact version.
-
-
-
-
-
-### Start Cypress
-
-```shell
-yarn cypress:open
-```
-
-> 🚩 **Note**
->
-> If you have changed the default ports, then you need to update Cypress configuration file (`cypress.config.ts`) locally.
-
 ## Tests
 
-| Type      | Location                                 |
-| --------- | ---------------------------------------- |
-| api       | [cypress/tests/api](./cypress/tests/api) |
-| ui        | [cypress/tests/ui](./cypress/tests/ui)   |
-| component | [src/(next to component)](./src)         |
+| Type          | Location                                                 |
+| ---------     | ---------------------------------------------------------|
+| accessibility | [cypress/e2e/accessibility](./cypress/e2e/accessibility) |
+| ui            | [cypress/e2e/func](./cypress/e2e/func)                   |
+| perf          | [cypress/e2e/perf](./cypress/e2e/perf)                   |
 
 
 ## Additional NPM Scripts
 
-| Script         | Description                                                                                                                                                                       |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dev            | Starts backend in watch mode and frontend                                                                                                                                         |
-| dev:coverage   | Starts backend in watch mode and frontend with instrumented code coverage enabled                                                                                                 |
-| dev:auth0      | Starts backend in watch mode and frontend; [Uses Auth0 for Authentication](#auth0) > [Read Guide](http://on.cypress.io/auth0)                                                     |
-| dev:okta       | Starts backend in watch mode and frontend; [Uses Okta for Authentication](#okta) > [Read Guide](http://on.cypress.io/okta)                                                        |
-| dev:cognito    | Starts backend in watch mode and frontend; [Uses Cognito for Authentication](#amazon-cognito) > [Read Guide](http://on.cypress.io/amazon-cognito)                                 |
-| dev:google     | Starts backend in watch mode and frontend; [Uses Google for Authentication](#google) > [Read Guide](https://docs.cypress.io/guides/testing-strategies/google-authentication.html) |
-| start          | Starts backend and frontend                                                                                                                                                       |
-| types          | Validates types                                                                                                                                                                   |
-| db:seed        | Generates fresh database seeds for json files in /data                                                                                                                            |
-| start:empty    | Starts backend, frontend and Cypress with empty database seed                                                                                                                     |
-| tsnode         | Customized ts-node command to get around react-scripts restrictions                                                                                                               |
-| list:dev:users | Provides id and username for users in the dev database                                                                                                                            |
+| Script           | Description                                                                                                                                                                       |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| setup            | checkout to main, install all dependencies and init husky                                                                                                                         |
+| test-cy          | Open Cy in interactive mode                                                                                                                                                       |
+| test-cy-chrome   | Execute all tests                                                                                                                                                                 |
+| test-cy-fox      | Execute all tests                                                                                                                                                                 |
+| code-quality-win | Check unit level code quality using tools - knip, EsLint, CSpell, etc.                                                                                                            |
+| code-quality-mac | Check unit level code quality using tools - knip, EsLint, CSpell, etc.                                                                                                            |
+| code-auto-fix    | Auto fix the issues of EsLint, etc.                                                                                                                                               |
 
 For a complete list of scripts see [package.json](./package.json)
 
-
-
-
-
-
 # In Future
 1. Test Cases: THere can be lot of untested use cases.  example mouse hover on a todo item and click the delete button and in perfomance testing adding a high number of to-do items and then checking them all
-2. Adding Tags
+2. Adding Tags to the test, so that tests can be listed in suites like `@smoke`, `@sanity`, `@deployment`
 
-# Bugs:
-On load data is gone, todo items should be saved in cache
-Duplicate todo items should not be allowed to add
+# Bugs
+1. On load data is gone, todo items should be saved in cache
+2. Duplicate todo items should not be allowed to add
