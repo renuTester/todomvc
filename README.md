@@ -154,8 +154,8 @@ npm run test-cy
 | test-cy          | Open Cy in interactive mode                                                                                                                                                       |
 | test-cy-chrome   | Execute all tests                                                                                                                                                                 |
 | test-cy-fox      | Execute all tests                                                                                                                                                                 |
-| code-quality-win | Check unit level code quality using tools - knip, EsLint, CSpell, etc.                                                                                                            |
-| code-quality-mac | Check unit level code quality using tools - knip, EsLint, CSpell, etc.                                                                                                            |
+| code-quality-win | Check unit level code quality using tools - knip, EsLint, Snyk, CSpell, etc.    -> Snyk would fail as token is not set due to security                                            |
+| code-quality-mac | Check unit level code quality using tools - knip, EsLint, Snyk, CSpell, etc.    -> Snyk would fail as token is not set due to security                                            |
 | code-auto-fix    | Auto fix the issues of EsLint, etc.                                                                                                                                               |
 
 For a complete list of scripts see [package.json](./package.json)
