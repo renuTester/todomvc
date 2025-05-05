@@ -3,4 +3,4 @@ node_modules/
 
 # Test Output
 mochawesome-report/
-junit_report/
+junit_report/*
